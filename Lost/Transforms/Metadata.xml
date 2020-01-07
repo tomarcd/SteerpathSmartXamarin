@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <remove-node path="/api/package[@name='com.mapzen.android.lost.internal']/class[@name='LostRequestManager']"/>
+    <remove-node path="/api/package[@name='com.mapzen.android.lost.internal']/class[@name='MockEngine']/field[@name='traceThread']"/>
+    <attr path="/api/package[@name='com.mapzen.android.lost.api']/interface[@name='Result']/method[@name='getStatus' and count(parameter)=0]" name="managedName">TheStatus</attr>
+    <attr path="/api/package[@name='com.mapzen.android.lost.internal']/class[@name='SimplePendingResult']/method[@name='await' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapzen.android.lost.internal']/class[@name='SimplePendingResult']/method[@name='await' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='java.util.concurrent.TimeUnit']]" name="managedReturn">Java.Lang.Object</attr>
+</metadata>
