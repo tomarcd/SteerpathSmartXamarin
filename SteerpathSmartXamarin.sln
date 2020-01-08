@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart", "Smart\Smart.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteerpathSmartXamarin.Droid", "SteerpathSmartXamarin.Droid\SteerpathSmartXamarin.Droid.csproj", "{7063CB5E-6F2B-40E7-B353-70A41978C891}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteerpathAndroid", "SteerpathAndroid\SteerpathAndroid.csproj", "{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,5 +141,17 @@ Global
 		{7063CB5E-6F2B-40E7-B353-70A41978C891}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{7063CB5E-6F2B-40E7-B353-70A41978C891}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{7063CB5E-6F2B-40E7-B353-70A41978C891}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Release|iPhone.Build.0 = Release|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

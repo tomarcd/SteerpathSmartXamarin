@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    
+    <remove-node path="/api/package[@name='com.steerpath.sdk.utils.internal']/class[@name='BaseQuery.Builder']/method[@name='getThis' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.steerpath.sdk.maps']/class[@name='SteerpathPolyline']/method[@name='setConcreteView' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"/>
+    <remove-node path="/api/package[@name='com.steerpath.sdk.maps']/class[@name='SteerpathAnnotation']/method[@name='getConcreteView' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.steerpath.sdk.maps']/class[@name='SteerpathAnnotation']/method[@name='setConcreteView' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"/>
+    <remove-node path="/api/package[@name='com.steerpath.sdk.maps']/class[@name='BottomSheetOptions']/method[@name='getThis' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.steerpath.sdk.live']/class[@name='LiveService']"/>
+    <remove-node path="/api/package[@name='com.steerpath.sdk.maps.internal']/interface[@name='OnSteerpathMarkerClickListener']"/>
+</metadata>

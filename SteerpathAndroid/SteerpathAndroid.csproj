@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BED5C0B2-C66B-41BA-92B5-4B15060206EF}</ProjectGuid>
+    <ProjectGuid>{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{77efb91c-a7e9-4b0e-a7c5-31eeec3c6d46}</TemplateGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Smart</RootNamespace>
-    <AssemblyName>Smart</AssemblyName>
+    <RootNamespace>SteerpathAndroid</RootNamespace>
+    <AssemblyName>SteerpathAndroid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Additions\LiveService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
@@ -53,38 +54,13 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lost\Lost.csproj">
-      <Project>{19468516-9A19-4E2D-B002-39024BB880F2}</Project>
-      <Name>Lost</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MapboxAndroidTelemetry\MapboxAndroidTelemetry.csproj">
-      <Project>{13D24155-9D27-41E4-96E2-35077CF9233B}</Project>
-      <Name>MapboxAndroidTelemetry</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MapboxGLAndroidSDK\MapboxGLAndroidSDK.csproj">
-      <Project>{E9529D87-6099-4D70-8320-81BF9909F37D}</Project>
-      <Name>MapboxGLAndroidSDK</Name>
-    </ProjectReference>
+    <LibraryProjectZip Include="Jars\steerpath-android-3.6.0.0-beta.2.aar" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SteerpathSmartReferenceJars\SteerpathSmartReferenceJars.csproj">
       <Project>{CFA2401A-F7B3-4DF7-9852-11186FD94BD8}</Project>
       <Name>SteerpathSmartReferenceJars</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Timber\Timber.csproj">
-      <Project>{DA45E349-7840-4A24-AA5E-7D08D235384C}</Project>
-      <Name>Timber</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SteerpathSmartXamarin\SteerpathSmartXamarin.csproj">
-      <Project>{F15DD508-3FBB-4F0D-A7CC-5D7658451EAE}</Project>
-      <Name>SteerpathSmartXamarin</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Fragment">
-      <Version>28.0.0.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\smart-1.0.0.1.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
