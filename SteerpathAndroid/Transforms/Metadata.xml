@@ -14,5 +14,6 @@
     <remove-node path="/api/package[@name='com.steerpath.sdk.maps']/class[@name='SteerpathAnnotation']/method[@name='setConcreteView' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"/>
     <remove-node path="/api/package[@name='com.steerpath.sdk.maps']/class[@name='BottomSheetOptions']/method[@name='getThis' and count(parameter)=0]"/>
     <remove-node path="/api/package[@name='com.steerpath.sdk.live']/class[@name='LiveService']"/>
-    <remove-node path="/api/package[@name='com.steerpath.sdk.maps.internal']/interface[@name='OnSteerpathMarkerClickListener']"/>
+  
+   
 </metadata>

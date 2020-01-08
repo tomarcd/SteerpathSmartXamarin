@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Runtime;
@@ -6,16 +7,23 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Com.Mapbox.Mapboxsdk.Camera;
+using Com.Mapbox.Mapboxsdk.Geometry;
+using Com.Steerpath.Sdk.Maps;
 using Com.Steerpath.Sdk.Meta;
-using Com.Steerpath.Smart;
-using static Com.Steerpath.Sdk.Meta.MetaQuery;
 
 namespace SteerpathSmartXamarin.Droid
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity , Com.Steerpath.Sdk.Meta.MetaLoader.ILoadListener
+    public class MainActivity : AppCompatActivity, MetaLoader.ILoadListener, SteerpathMapFragment.IMapViewListener
     {
-        readonly string SmartMapFragmentTag = "map";
+        readonly string SteerpathMapFragmentTag = "steerpath-map-fragment";
+
+        protected SteerpathMap map = null;
+        protected SteerpathMapView mapView = null;
+        protected MetaFeature building;
+        protected IList<MetaFeature> features;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,16 +36,22 @@ namespace SteerpathSmartXamarin.Droid
             Window.AddFlags(WindowManagerFlags.KeepScreenOn);
             if (savedInstanceState == null)
             {
-                SmartMapFragment map = SmartMapFragment.NewInstance();
-                SupportFragmentManager
-                    .BeginTransaction()
-                    .Replace(Resource.Id.map_container, map, SmartMapFragmentTag)
-                    .Commit();
+                SupportFragmentManager.BeginTransaction().Replace(
+                        Resource.Id.map_container, SteerpathMapFragment.NewInstance(), "steerpath-map-fragment").Commit();
             }
 
-            MetaLoader.Load((Com.Steerpath.Sdk.Meta.MetaQuery)new MetaQuery.Builder(this, DataType.Buildings).Build(), this);
-
+            var query = (Com.Steerpath.Sdk.Meta.MetaQuery)new MetaQuery.Builder(this, MetaQuery.DataType.Buildings).Build();
+            MetaLoader.Load(query, new BuildingLoadListener(this));
         }
+
+        private void LoadPois(string buildingRef)
+        {
+            var query = (Com.Steerpath.Sdk.Meta.MetaQuery)new MetaQuery.Builder(this, MetaQuery.DataType.PointsOfInterest)
+                    .Building(buildingRef)
+                    .Build();
+            MetaLoader.Load(query, this);
+        }
+
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -56,9 +70,9 @@ namespace SteerpathSmartXamarin.Droid
             return base.OnOptionsItemSelected(item);
         }
 
-        protected SmartMapFragment GetMap()
+        protected SteerpathMapFragment GetMap()
         {
-            return (SmartMapFragment)SupportFragmentManager.FindFragmentByTag(SmartMapFragmentTag);
+            return (SteerpathMapFragment)SupportFragmentManager.FindFragmentByTag(SteerpathMapFragmentTag);
         }
 
 
@@ -69,24 +83,78 @@ namespace SteerpathSmartXamarin.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        public void OnLoaded(MetaQueryResult p0)
+        public void OnLoaded(MetaQueryResult metaQueryResult)
         {
-            if (p0.IsSuccess) {
-                if (p0.MetaFeatures.Count > 0) {
-                    SmartMapFragment map = GetMap();
-                    if (map != null) {
-                        map.NavigateToObject(ToSmartMapObject(p0.MetaFeatures[0]));
-                    }
+            if (metaQueryResult.IsSuccess) {
+                if (metaQueryResult.MetaFeatures.Count > 0) {
+                    features = metaQueryResult.MetaFeatures;
                 }
             }
         }
 
-        private  SmartMapObject ToSmartMapObject(MetaFeature var0)
+        public void OnMapViewReady(SteerpathMapView mapView)
         {
-            SmartMapObject var2 = new SmartMapObject(var0.Latitude, var0.Longitude, var0.FloorIndex, /*var0.LocalRef*/"room", var0.BuildingRef);
-            var2.Title = var0.Title;
-            var2.Source = ObjectSource.Marker;
-            return var2;
+            this.mapView = mapView;
+            mapView.GetMapAsync(new MapReadyCallback(this));
+        }
+
+        protected void ShowBuilding()
+        {
+            if (mapView != null) {
+                mapView.GetMapAsync(new MapReadyCallback(this));
+            }
+        }
+
+        protected  void MoveCameraTo(SteerpathMap map, MetaFeature feature)
+        {
+            if (feature != null)
+            {
+                map.SetCameraPosition(new CameraPosition.Builder()
+                        .Target(new LatLng(feature.Latitude, feature.Longitude))
+                        .Zoom(18)
+                        .Build());
+            }
+        }
+
+        protected class MapReadyCallback : Java.Lang.Object, Com.Steerpath.Sdk.Maps.IOnMapReadyCallback
+        {
+            MainActivity _parent;
+            public MapReadyCallback(MainActivity parent)
+            {
+                _parent = parent;
+            }
+
+            public void OnMapReady(SteerpathMap steerpathMap)
+            {
+                _parent.map = steerpathMap;
+                _parent.map.SetMyLocationEnabled(true);
+                _parent.map.SetTiltGesturesEnabled(true);
+                _parent.MoveCameraTo(_parent.map, _parent.building);
+            }
+        }
+
+
+
+        protected class BuildingLoadListener : Java.Lang.Object, MetaLoader.ILoadListener
+        {
+            MainActivity _parent;
+            public BuildingLoadListener(MainActivity parent)
+            {
+                _parent = parent;
+            }
+
+            public void OnLoaded(MetaQueryResult p0)
+            {
+                if (p0.IsSuccess)
+                {
+                    if (p0.MetaFeatures.Count > 0)
+                    {
+                        _parent.building = p0.MetaFeatures[0];
+                        _parent.ShowBuilding();
+                        _parent.LoadPois(_parent.building.BuildingRef);
+                    }
+                }
+            }
         }
     }
 }

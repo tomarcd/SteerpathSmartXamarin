@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapboxAndroidTelemetry", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapboxGLAndroidSDK", "MapboxGLAndroidSDK\MapboxGLAndroidSDK.csproj", "{E9529D87-6099-4D70-8320-81BF9909F37D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart", "Smart\Smart.csproj", "{BED5C0B2-C66B-41BA-92B5-4B15060206EF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteerpathSmartXamarin.Droid", "SteerpathSmartXamarin.Droid\SteerpathSmartXamarin.Droid.csproj", "{7063CB5E-6F2B-40E7-B353-70A41978C891}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteerpathAndroid", "SteerpathAndroid\SteerpathAndroid.csproj", "{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}"
@@ -117,18 +115,6 @@ Global
 		{E9529D87-6099-4D70-8320-81BF9909F37D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{E9529D87-6099-4D70-8320-81BF9909F37D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{E9529D87-6099-4D70-8320-81BF9909F37D}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Release|iPhone.Build.0 = Release|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{BED5C0B2-C66B-41BA-92B5-4B15060206EF}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{7063CB5E-6F2B-40E7-B353-70A41978C891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7063CB5E-6F2B-40E7-B353-70A41978C891}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7063CB5E-6F2B-40E7-B353-70A41978C891}.Release|Any CPU.ActiveCfg = Release|Any CPU

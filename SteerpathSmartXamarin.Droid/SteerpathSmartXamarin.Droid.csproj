@@ -128,10 +128,6 @@
       <Project>{CFA2401A-F7B3-4DF7-9852-11186FD94BD8}</Project>
       <Name>SteerpathSmartReferenceJars</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Smart\Smart.csproj">
-      <Project>{BED5C0B2-C66B-41BA-92B5-4B15060206EF}</Project>
-      <Name>Smart</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MapboxGLAndroidSDK\MapboxGLAndroidSDK.csproj">
       <Project>{E9529D87-6099-4D70-8320-81BF9909F37D}</Project>
       <Name>MapboxGLAndroidSDK</Name>

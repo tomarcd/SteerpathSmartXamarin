@@ -54,13 +54,22 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\steerpath-android-3.6.0.0-beta.2.aar" />
+    <LibraryProjectZip Include="Jars\steerpath-android-3.6.1.1.aar" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SteerpathSmartReferenceJars\SteerpathSmartReferenceJars.csproj">
       <Project>{CFA2401A-F7B3-4DF7-9852-11186FD94BD8}</Project>
       <Name>SteerpathSmartReferenceJars</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MapboxGLAndroidSDK\MapboxGLAndroidSDK.csproj">
+      <Project>{E9529D87-6099-4D70-8320-81BF9909F37D}</Project>
+      <Name>MapboxGLAndroidSDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
