@@ -77,10 +77,6 @@
       <Project>{F15DD508-3FBB-4F0D-A7CC-5D7658451EAE}</Project>
       <Name>SteerpathSmartXamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SteerpathBetaAndroid\SteerpathBetaAndroid.csproj">
-      <Project>{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}</Project>
-      <Name>SteerpathBetaAndroid</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Fragment">
@@ -88,7 +84,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\smart-1.0.0.1.aar" />
+    <LibraryProjectZip Include="Jars\smart-1.0.0.3.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
