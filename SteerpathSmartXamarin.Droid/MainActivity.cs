@@ -33,6 +33,8 @@ namespace SteerpathSmartXamarin.Droid
                     .BeginTransaction()
                     .Replace(Resource.Id.map_container, map, SmartMapFragmentTag)
                     .Commit();
+
+                map.AnimateCameraToBuildingRef("341", null);
             }
 
             MetaLoader.Load((Com.Steerpath.Sdk.Meta.MetaQuery)new MetaQuery.Builder(this, DataType.Buildings).Build(), this);
@@ -74,9 +76,9 @@ namespace SteerpathSmartXamarin.Droid
             if (p0.IsSuccess) {
                 if (p0.MetaFeatures.Count > 0) {
                     SmartMapFragment map = GetMap();
-                    if (map != null) {
-                        map.NavigateToObject(ToSmartMapObject(p0.MetaFeatures[0]));
-                    }
+                    //if (map != null) {
+                    //    map.NavigateToObject(ToSmartMapObject(p0.MetaFeatures[0]));
+                    //}
                 }
             }
         }

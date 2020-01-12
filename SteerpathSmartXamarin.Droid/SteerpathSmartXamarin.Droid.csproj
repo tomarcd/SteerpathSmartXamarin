@@ -148,9 +148,9 @@
       <Project>{DA45E349-7840-4A24-AA5E-7D08D235384C}</Project>
       <Name>Timber</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SteerpathAndroid\SteerpathAndroid.csproj">
+    <ProjectReference Include="..\SteerpathBetaAndroid\SteerpathBetaAndroid.csproj">
       <Project>{99F9D145-AC49-4AA8-8D04-688E05ABD7F4}</Project>
-      <Name>SteerpathAndroid</Name>
+      <Name>SteerpathBetaAndroid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

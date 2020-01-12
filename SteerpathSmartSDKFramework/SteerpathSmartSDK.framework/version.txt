@@ -1,0 +1,2 @@
+Version 1.0.1 from https://github.com/memononen/libtess2 24e4bdd4158909e9720422208ab0a0aca788e700
+Changed TESSreal typedef from float to double

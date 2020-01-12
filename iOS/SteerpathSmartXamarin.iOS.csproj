@@ -85,6 +85,10 @@
       <Name>SteerpathSmartXamarin</Name>
       <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
     </ProjectReference>
+    <ProjectReference Include="..\SteerpathSmartSDKFramework\SteerpathSmartSDKFramework.csproj">
+      <Project>{A7EF1791-3418-4561-A6D9-0E7779139ED7}</Project>
+      <Name>SteerpathSmartSDKFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

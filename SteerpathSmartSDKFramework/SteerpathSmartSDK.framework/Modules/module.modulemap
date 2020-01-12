@@ -1,0 +1,6 @@
+framework module SteerpathSmartSDK {
+  umbrella header "SteerpathSmartSDK.h"
+
+  export *
+  module * { export * }
+}

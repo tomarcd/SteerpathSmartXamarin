@@ -1,0 +1,160 @@
+{
+    "services": {
+        "smartmap": {
+            "default": {
+                "nonSelectableCssClasses": [
+                    "infrastructure_department",
+                    "infrastructure_wing"
+                ],
+                "mapDataURL": "https://mapdata.eu.steerpath.com/",
+                "bluedot": {
+                    "indoor": true,
+                    "outdoor": true
+                },
+                "routing": {
+                    "require_indoor_positioning_allowed": true,
+                    "require_outdoor_positioning_allowed": true
+                },
+                "routeDataURL": "https://routes.eu.steerpath.com/",
+                "navigationDestinationThresholdM": 5,
+                "navigationRerouteThresholdM": 5,
+                "mapStylePath": "/style/default.json"
+            }
+        },
+        "kiosk": {},
+        "search": {
+            "default": {
+                "nonSearchableCssClasses": [
+                    "infrastructure_lighting",
+                    "infrastructure_stairs",
+                    "infrastructure_lift",
+                    "category_stairs"
+                ],
+                "searchSuggestions": [
+                    {
+                        "title": "sp_category_room_title",
+                        "shortTitle": "sp_category_room_title_short",
+                        "description": "sp_category_room_description",
+                        "iconName": "category_room",
+                        "action": {
+                            "type": "show_pois_with_tags",
+                            "allTags": [
+                                "category_room"
+                            ]
+                        }
+                    },
+                    {
+                        "title": "sp_category_retail_title",
+                        "shortTitle": "sp_category_retail_title_short",
+                        "description": "sp_category_retail_description",
+                        "iconName": "category_retail",
+                        "action": {
+                            "type": "show_pois_with_tags",
+                            "allTags": [
+                                "category_retail"
+                            ]
+                        }
+                    },
+                    {
+                        "title": "sp_service_toilet_title",
+                        "shortTitle": "sp_service_toilet_title_short",
+                        "description": "sp_service_toilet_description",
+                        "iconName": "service_toilet",
+                        "action": {
+                            "type": "show_pois_with_tags",
+                            "anyTags": [
+                                "service_toilet",
+                                "toilet"
+                            ]
+                        }
+                    },
+                    {
+                        "title": "sp_category_restaurant_title",
+                        "shortTitle": "sp_category_restaurant_title_short",
+                        "description": "sp_category_restaurant_description",
+                        "iconName": "category_restaurant",
+                        "action": {
+                            "type": "show_pois_with_tags",
+                            "allTags": [
+                                "category_restaurant"
+                            ]
+                        }
+                    },
+                    {
+                        "title": "sp_category_fun_title",
+                        "shortTitle": "sp_category_fun_title_short",
+                        "description": "sp_category_fun_description",
+                        "iconName": "category_fun",
+                        "action": {
+                            "type": "show_pois_with_tags",
+                            "allTags": [
+                                "category_fun"
+                            ]
+                        }
+					}
+                ],
+                "moreSuggestionsButton": {
+                    "title": "sp_more_suggestions_title",
+                    "shortTitle": "sp_more_suggestions_title_short",
+                    "description": "sp_more_suggestions_description",
+                    "iconName": "category_more",
+                    "action": {
+                        "type": "show_more_categories"
+                    }
+                }
+            }
+        },
+        "telemetry": {
+            "default": {
+                "telemetryURL": "https://5nw4rlv3zg.execute-api.eu-west-1.amazonaws.com/testing/v1/",
+                "beacons": "known",
+                "location": "indoor",
+                "enabled": false,
+                "locationIntervalS": 60,
+                "transmissionIntervalS": 120
+            }
+        },
+        "metadata": {
+            "default": {
+                "metadataURL": "https://meta2.eu.steerpath.com/meta/v2/"
+            }
+        },
+        "offline": {
+            "default": {
+                "offlineDataURL": "https://offline.eu.steerpath.com/"
+            }
+        },
+        "live": {
+            "default": {
+                "liveURL": "https://live-eu.steerpath.com/",
+                "liveApiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZXMiOiJsaXZlOnIiLCJqdGkiOiIzNWEzYjJkNy1hNGNmLTQ0ZWMtOGQ5NS1mOWNjY2VkZmQzMDgiLCJzdWIiOiJzZW5hYXR0aSJ9._eBC02Y3seMQg8u31nM5dJBvEDVQFVvNF15lokuv2TI",
+                "enabled": true
+            }
+        },
+        "positioning": {
+            "default": {
+                "beaconsURL": "https://beacons2.eu.steerpath.com/",
+                "nddURL": "https://ndd.eu.steerpath.com/",
+                "eidURL": "https://eidupdates.eu.steerpath.com/",
+                "useAccelerometer": true,
+                "useGyro": false,
+                "useCompass": false,
+                "gpsThresholdM": 10
+				
+			},
+			"ios": {
+				"useCompass": true
+			}
+        },
+        "ui": {
+            "default": {
+                "colors": {
+                    "primaryColor": "#489aff",
+                    "secondaryColor": "rgb(250, 250, 250)",
+                    "blueDotColor": "#800000"
+                }
+            }
+        }
+    },
+    "update": false
+}
