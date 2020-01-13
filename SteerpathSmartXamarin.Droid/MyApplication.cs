@@ -2,7 +2,7 @@
 using Android.App;
 using Com.Steerpath.Smart;
 
-namespace MatiIntegration.Droid
+namespace SteerpathSmartXamarin.Droid
 {
     [Application]
     public class MyApplication : Application
