@@ -53,10 +53,11 @@ namespace SteerpathSmartSDK
 	public enum SPSmartMapUserTaskResponse : long
 	{
 		Started,
-		Ended,
+		Cancelled,
 		Error,
 		Busy,
-		UnSupported
+		UnSupported,
+		Completed
 	}
 
 	[Native]
@@ -81,5 +82,12 @@ namespace SteerpathSmartSDK
 		GeofenceNotFound = 1,
 		MalformedData = 2,
 		Success = 3
+	}
+
+	[Native]
+	public enum SPSmartSharingCodeErrorType : ulong
+	{
+		InvalidFormat = 1,
+		DataFound = 2
 	}
 }

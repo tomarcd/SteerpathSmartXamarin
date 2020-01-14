@@ -8,7 +8,6 @@
 
 #pragma mark - Dependencies
 #import <Foundation/Foundation.h>
-#import "SPSmartMapObject.h"
 
 #pragma mark - Enums
 /**
@@ -20,9 +19,9 @@ typedef NS_ENUM(NSInteger, SPSmartMapUserTaskResponse) {
 	 */
 	SPSmartMapUserTaskResponseStarted,
 	/**
-	 User task is ended
+	 User task is cancelled
 	 */
-	SPSmartMapUserTaskResponseEnded,
+	SPSmartMapUserTaskResponseCancelled,
 	/**
 	 Some error happens
 	 */
@@ -34,7 +33,11 @@ typedef NS_ENUM(NSInteger, SPSmartMapUserTaskResponse) {
 	/**
 	 The type of the task is not supported
 	 */
-	SPSmartMapUserTaskResponseUnSupported
+	SPSmartMapUserTaskResponseUnSupported,
+	/**
+	The task is completed successfully by user
+	 */
+	SPSmartMapUserTaskResponseCompleted
 };
 
 #pragma mark - Base class
@@ -54,15 +57,19 @@ typedef NS_ENUM(NSInteger, SPSmartMapUserTaskResponse) {
 
 @optional
 /**
- 	Called when smartmap start a userTask
+ 	Called when smartmap start a userTask. Whenever the user task is interrupted. The response type will be "Cancelled" otherwise if it is finished "Completed" will be returned.
+ 	After a user task is finished. The map mode will be set to mapOnly.
 
+ 	@param userTask The user task that is triggering this callback.
  	@param response The response of the task.
  */
-- (void)onUserTaskResponse:(SPSmartMapUserTaskResponse)response;
+- (void)spSmartMapUserTask:(SPSmartMapUserTask* _Nonnull)userTask onUserTaskResponse:(SPSmartMapUserTaskResponse)response;
 
 @end
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class SPSmartMapObject;
 
 #pragma mark - Navigation User Task Implementation
 /**

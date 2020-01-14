@@ -19,5 +19,7 @@
 #import "SPSmartSDK.h"
 #import "SPSmartGeofenceManager.h"
 #import "SPSmartMapNavigationUserTask.h"
+#import "SPSmartSharingCodeResolver.h"
+#import "SPSmartMapPOISelectionUserTask.h"
 
 #endif

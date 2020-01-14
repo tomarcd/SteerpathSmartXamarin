@@ -10,6 +10,9 @@
 
 #import <Foundation/Foundation.h>
 
+/** Smart Map style finish loading key - Use this key to observe for when the map style is loaded */
+extern NSString* _Nonnull const kSPSmartMapFinishLoadingStyle;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -51,6 +54,16 @@ NS_ASSUME_NONNULL_BEGIN
     @param apiKey used for authentication
  */
 -(void)start:(NSString*)apiKey;
+
+/**
+    Starts the SDK with a specific API Key and a custom config file path.
+    Usually developers don't need this variant of start()-method. Just use the default one.
+ 
+    Need API access? Contact support@steerpath.com
+    @param apiKey used for authentication
+    @param configFilePath the local file path to the config JSON file
+ */
+-(void)start:(NSString*)apiKey config:(NSString*)configFilePath;
 
 #pragma mark - Configurations
 

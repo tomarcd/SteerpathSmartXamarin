@@ -9,7 +9,11 @@
 #pragma mark - Dependencies
 
 #import <Foundation/Foundation.h>
-
+#if __has_feature(modules)
+@import Mapbox;
+#else
+#import <Mapbox/Mapbox.h>
+#endif
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Enums
@@ -100,6 +104,11 @@ typedef NS_ENUM(NSUInteger, SPLayout) {
     'Markers' are user created map objects.
 */
 @property (nonatomic, assign) SPObjectSource source;
+
+/**
+    Metadata properties of the map object
+ */
+@property (nonatomic, assign) NSDictionary* properties;
 
 #pragma mark - Initializer
 

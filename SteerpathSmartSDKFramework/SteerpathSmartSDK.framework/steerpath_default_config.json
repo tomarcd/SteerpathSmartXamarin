@@ -21,9 +21,28 @@
                 "mapStylePath": "/style/default.json"
             }
         },
-        "kiosk": {},
+        "kiosk": {
+            "default": {
+                "share": {
+                    "hash": false,
+                    "qrCodeShare": {
+                        "enabled": true,
+                        "qrCodeURL": "https://kiosk.steerpath.com/",
+                        "qrCodePath": "steerpath/index.html"
+                    },
+                    "copyLinkToClipboard": true
+                }
+            }
+        },
+        "settings": {
+            "default": {
+                "enabled": true,
+                "externalLinks": []
+            }
+        },
         "search": {
             "default": {
+				"sortSearchResultByDistance" : true,
                 "nonSearchableCssClasses": [
                     "infrastructure_lighting",
                     "infrastructure_stairs",
@@ -54,43 +73,43 @@
                                 "category_retail"
                             ]
                         }
-                    },
-                    {
-                        "title": "sp_service_toilet_title",
-                        "shortTitle": "sp_service_toilet_title_short",
-                        "description": "sp_service_toilet_description",
-                        "iconName": "service_toilet",
-                        "action": {
-                            "type": "show_pois_with_tags",
-                            "anyTags": [
-                                "service_toilet",
-                                "toilet"
-                            ]
-                        }
-                    },
-                    {
-                        "title": "sp_category_restaurant_title",
-                        "shortTitle": "sp_category_restaurant_title_short",
-                        "description": "sp_category_restaurant_description",
-                        "iconName": "category_restaurant",
-                        "action": {
-                            "type": "show_pois_with_tags",
-                            "allTags": [
-                                "category_restaurant"
-                            ]
-                        }
-                    },
-                    {
-                        "title": "sp_category_fun_title",
-                        "shortTitle": "sp_category_fun_title_short",
-                        "description": "sp_category_fun_description",
-                        "iconName": "category_fun",
-                        "action": {
-                            "type": "show_pois_with_tags",
-                            "allTags": [
-                                "category_fun"
-                            ]
-                        }
+					},
+					{
+						"title": "sp_service_toilet_title",
+						"shortTitle": "sp_service_toilet_title_short",
+						"description": "sp_service_toilet_description",
+						"iconName": "service_toilet",
+						"action": {
+							"type": "show_pois_with_tags",
+							"anyTags": [
+								"service_toilet",
+								"toilet"
+							]
+						}
+					},
+					{
+						"title": "sp_category_restaurant_title",
+						"shortTitle": "sp_category_restaurant_title_short",
+						"description": "sp_category_restaurant_description",
+						"iconName": "category_restaurant",
+						"action": {
+							"type": "show_pois_with_tags",
+							"allTags": [
+								"category_restaurant"
+							]
+						}
+					},
+					{
+						"title": "sp_category_fun_title",
+						"shortTitle": "sp_category_fun_title_short",
+						"description": "sp_category_fun_description",
+						"iconName": "category_fun",
+						"action": {
+							"type": "show_pois_with_tags",
+							"allTags": [
+								"category_fun"
+							]
+						}
 					}
                 ],
                 "moreSuggestionsButton": {
@@ -126,7 +145,7 @@
         },
         "live": {
             "default": {
-                "liveURL": "https://live-eu.steerpath.com/",
+                "liveURL": "https://live-eu3.steerpath.com/",
                 "liveApiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZXMiOiJsaXZlOnIiLCJqdGkiOiIzNWEzYjJkNy1hNGNmLTQ0ZWMtOGQ5NS1mOWNjY2VkZmQzMDgiLCJzdWIiOiJzZW5hYXR0aSJ9._eBC02Y3seMQg8u31nM5dJBvEDVQFVvNF15lokuv2TI",
                 "enabled": true
             }
@@ -140,11 +159,10 @@
                 "useGyro": false,
                 "useCompass": false,
                 "gpsThresholdM": 10
-				
-			},
-			"ios": {
-				"useCompass": true
-			}
+            },
+            "ios": {
+                "useCompass": true
+            }
         },
         "ui": {
             "default": {

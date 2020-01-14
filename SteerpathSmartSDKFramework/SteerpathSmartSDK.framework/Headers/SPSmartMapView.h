@@ -201,6 +201,13 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)getMapObject:(NSString*)localRef buildingRef:(NSString*)buildingRef source:(SPObjectSource)source completion:(nullable void(^)(SPSmartMapObject* _Nullable mapObject, SPMapResponse response))completionBlock;
 
 /**
+    Fetches a map object from properties
+ 
+    @param properties properties of the needed map object
+    @param completionBlock containing map object if successful. Also contains a response informing of any possible errors.
+*/
+-(void)getMapObjectByProperties:(NSDictionary*)properties completion:(nullable void(^)(SPSmartMapObject* _Nullable mapObject, SPMapResponse response))completionBlock;
+/**
     Set additional data for a live map object.
  
     @param identifier unique object identifier
