@@ -80,11 +80,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SteerpathSmartXamarin\SteerpathSmartXamarin.csproj">
-      <Project>{F15DD508-3FBB-4F0D-A7CC-5D7658451EAE}</Project>
-      <Name>SteerpathSmartXamarin</Name>
-      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
-    </ProjectReference>
     <ProjectReference Include="..\SteerpathSmartSDKFramework\SteerpathSmartSDKFramework.csproj">
       <Project>{A7EF1791-3418-4561-A6D9-0E7779139ED7}</Project>
       <Name>SteerpathSmartSDKFramework</Name>

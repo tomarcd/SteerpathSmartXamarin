@@ -299,17 +299,17 @@ namespace SteerpathSmartSDK
 		void CancelCurrentUserTask ();
 	}
 
-	[Static]
-	partial interface Constants
-	{
-		// extern NSString *const _Nonnull kSPSmartMapFinishLoadingStyle;
-		[Field ("kSPSmartMapFinishLoadingStyle", "__Internal")]
-		NSString kSPSmartMapFinishLoadingStyle { get; }
+	//[Static]
+	//partial interface Constants
+	//{
+	//	// extern NSString *const _Nonnull kSPSmartMapFinishLoadingStyle;
+	//	[Field ("kSPSmartMapFinishLoadingStyle", "__Internal")]
+	//	NSString kSPSmartMapFinishLoadingStyle { get; }
 
-		// extern NSString *const kSPSmartGeofenceErrorDomain;
-		[Field("kSPSmartGeofenceErrorDomain", "__Internal")]
-		NSString kSPSmartGeofenceErrorDomain { get; }
-	}
+	//	// extern NSString *const kSPSmartGeofenceErrorDomain;
+	//	[Field("kSPSmartGeofenceErrorDomain", "__Internal")]
+	//	NSString kSPSmartGeofenceErrorDomain { get; }
+	//}
 
 	// @interface SPSmartSDK : NSObject
 	[BaseType (typeof(NSObject))]

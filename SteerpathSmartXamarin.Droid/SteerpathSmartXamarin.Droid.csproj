@@ -177,13 +177,13 @@
       <Project>{CFA2401A-F7B3-4DF7-9852-11186FD94BD8}</Project>
       <Name>SteerpathSmartReferenceJars</Name>
     </ProjectReference>
-    <ProjectReference Include="..\material-1.1.0-alpha10\material-1.1.0-alpha10.csproj">
-      <Project>{06AAB0FE-A1B7-439C-BC5B-60030F6581E0}</Project>
-      <Name>material-1.1.0-alpha10</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MapboxAndroidGestures\MapboxAndroidGestures.csproj">
       <Project>{AB11D859-E191-4DDF-8DBF-40C694D0BCB4}</Project>
       <Name>MapboxAndroidGestures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Google.Android.Material\Xamarin.Google.Android.Material.csproj">
+      <Project>{0CA59AC1-2CCC-4A72-9B11-8A887663CE7E}</Project>
+      <Name>Xamarin.Google.Android.Material</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

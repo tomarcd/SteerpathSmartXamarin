@@ -19,6 +19,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <LangVersion>preview</LangVersion>
     <_EnableInterfaceMembers>true</_EnableInterfaceMembers>
+    <DesignTimeBuild>false</DesignTimeBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,10 +68,6 @@
       <Project>{CFA2401A-F7B3-4DF7-9852-11186FD94BD8}</Project>
       <Name>SteerpathSmartReferenceJars</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SteerpathSmartXamarin\SteerpathSmartXamarin.csproj">
-      <Project>{F15DD508-3FBB-4F0D-A7CC-5D7658451EAE}</Project>
-      <Name>SteerpathSmartXamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MapboxAndroidCore\MapboxAndroidCore.csproj">
       <Project>{6445788F-44EC-4647-A1C6-762500936074}</Project>
       <Name>MapboxAndroidCore</Name>
@@ -83,13 +80,58 @@
       <Project>{AB11D859-E191-4DDF-8DBF-40C694D0BCB4}</Project>
       <Name>MapboxAndroidGestures</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Google.Android.Material\Xamarin.Google.Android.Material.csproj">
+      <Project>{0CA59AC1-2CCC-4A72-9B11-8A887663CE7E}</Project>
+      <Name>Xamarin.Google.Android.Material</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\smart-1.3.3.0.aar" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Fragment">
+    <PackageReference Include="Xamarin.AndroidX.AppCompat">
       <Version>1.1.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Migration">
+      <Version>1.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.CoordinatorLayout">
+      <Version>1.1.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.CardView">
+      <Version>1.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.LocalBroadcastManager">
+      <Version>1.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView">
+      <Version>1.1.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils">
+      <Version>1.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4">
+      <Version>1.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Transition">
+      <Version>1.2.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI">
+      <Version>1.0.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Collection">
+      <Version>1.1.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData">
+      <Version>2.1.0-rc1</Version>
+    </PackageReference>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
