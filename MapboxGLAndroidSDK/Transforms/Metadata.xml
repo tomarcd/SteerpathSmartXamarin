@@ -7,8 +7,12 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
-    <remove-node path="/api/package[@name='com.almeros.android.multitouch.gesturedetectors']/class[@name='TwoFingerGestureDetector']/method[@name='handleInProgressEvent' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.view.MotionEvent']]"/>
+    <!--<remove-node path="/api/package[@name='com.almeros.android.multitouch.gesturedetectors']/class[@name='TwoFingerGestureDetector']/method[@name='handleInProgressEvent' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.view.MotionEvent']]"/>
     <remove-node path="/api/package[@name='com.almeros.android.multitouch.gesturedetectors']/class[@name='TwoFingerGestureDetector']/method[@name='handleStartProgressEvent' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.view.MotionEvent']]"/>
     <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='PolygonOptions']/method[@name='addHole' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;com.mapbox.mapboxsdk.geometry.LatLng&gt;...']]"/>
     <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.functions.stops']/class[@name='Stops']/method[@name='getTypeName' and count(parameter)=0]"/>
+-->    
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.utils']/class[@name='FileUtils.CheckFileReadPermissionTask']"/>
+    <remove-node  path="/api/package[@name='com.mapbox.mapboxsdk.utils']/class[@name='FileUtils.CheckFileWritePermissionTask']"/>
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='PolygonOptions']/method[@name='addHole' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;com.mapbox.mapboxsdk.geometry.LatLng&gt;...']]"/>
 </metadata>

@@ -17,6 +17,8 @@
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <LangVersion>preview</LangVersion>
+    <_EnableInterfaceMembers>true</_EnableInterfaceMembers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,13 +56,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedReferenceJar Include="Jars\dagger-2.13.jar" />
-    <EmbeddedReferenceJar Include="Jars\gson-2.8.0.jar" />
+    <EmbeddedReferenceJar Include="Jars\gson-2.8.5.jar" />
     <EmbeddedReferenceJar Include="Jars\javax.inject-1.jar" />
-    <EmbeddedReferenceJar Include="Jars\mapbox-java-core-2.2.10.jar" />
-    <EmbeddedReferenceJar Include="Jars\mapbox-java-geojson-2.2.10.jar" />
-    <EmbeddedReferenceJar Include="Jars\okhttp-3.11.0.jar" />
-    <EmbeddedReferenceJar Include="Jars\okio-1.14.0.jar" />
-    <EmbeddedReferenceJar Include="Jars\parceler-api-1.1.11.jar" />
+    <EmbeddedReferenceJar Include="Jars\jjwt-api-0.10.5.jar" />
+    <EmbeddedReferenceJar Include="Jars\jjwt-orgjson-0.10.5.jar" />
+    <EmbeddedReferenceJar Include="Jars\json-20180130.jar" />
+    <EmbeddedReferenceJar Include="Jars\mapbox-sdk-geojson-4.8.0.jar" />
+    <EmbeddedReferenceJar Include="Jars\mapbox-sdk-turf-4.8.0.jar" />
+    <EmbeddedReferenceJar Include="Jars\okhttp-3.12.3.jar" />
+    <EmbeddedReferenceJar Include="Jars\okio-1.15.0.jar" />
+    <EmbeddedReferenceJar Include="Jars\parceler-api-1.1.12.jar" />
+    <EmbeddedReferenceJar Include="Jars\soloader-0.6.1.jar" />
     <EmbeddedReferenceJar Include="Jars\zip4j-1.3.1.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />

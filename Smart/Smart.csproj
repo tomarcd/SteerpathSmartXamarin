@@ -17,6 +17,8 @@
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <LangVersion>preview</LangVersion>
+    <_EnableInterfaceMembers>true</_EnableInterfaceMembers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,10 +55,6 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lost\Lost.csproj">
-      <Project>{19468516-9A19-4E2D-B002-39024BB880F2}</Project>
-      <Name>Lost</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MapboxAndroidTelemetry\MapboxAndroidTelemetry.csproj">
       <Project>{13D24155-9D27-41E4-96E2-35077CF9233B}</Project>
       <Name>MapboxAndroidTelemetry</Name>
@@ -69,22 +67,26 @@
       <Project>{CFA2401A-F7B3-4DF7-9852-11186FD94BD8}</Project>
       <Name>SteerpathSmartReferenceJars</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Timber\Timber.csproj">
-      <Project>{DA45E349-7840-4A24-AA5E-7D08D235384C}</Project>
-      <Name>Timber</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SteerpathSmartXamarin\SteerpathSmartXamarin.csproj">
       <Project>{F15DD508-3FBB-4F0D-A7CC-5D7658451EAE}</Project>
       <Name>SteerpathSmartXamarin</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MapboxAndroidCore\MapboxAndroidCore.csproj">
+      <Project>{6445788F-44EC-4647-A1C6-762500936074}</Project>
+      <Name>MapboxAndroidCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MapboxAndroidAccounts\MapboxAndroidAccounts.csproj">
+      <Project>{3EBF6D5C-E9C1-4F92-929B-D657E02510DB}</Project>
+      <Name>MapboxAndroidAccounts</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Fragment">
-      <Version>28.0.0.1</Version>
+    <LibraryProjectZip Include="Jars\smart-1.3.3.0.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Fragment">
+      <Version>1.1.0-rc1</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\smart-1.0.0.3.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

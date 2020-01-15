@@ -17,6 +17,8 @@
     <AndroidClassParser>jar2xml</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <LangVersion>preview</LangVersion>
+    <_EnableInterfaceMembers>true</_EnableInterfaceMembers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,7 +48,6 @@
     <Compile Include="Additions\MarkerOptions.cs" />
     <Compile Include="Additions\Polygon.cs" />
     <Compile Include="Additions\Polyline.cs" />
-    <Compile Include="Additions\MarkerViewOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
@@ -58,7 +59,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\MapboxGLAndroidSDK-android-5.5.3-steerpath-ndk17-1-1-g21827609e.aar" />
+    <LibraryProjectZip Include="Jars\MapboxGLAndroidSDK-android-8.2.0-steerpath.1.1.0.3.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

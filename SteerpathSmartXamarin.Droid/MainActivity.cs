@@ -2,10 +2,9 @@
 using Android.App;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.V7.App;
 using Android.Views;
-using Android.Widget;
+using AndroidX.AppCompat.App;
+using AndroidX.AppCompat.Widget;
 using Com.Steerpath.Smart;
 
 
@@ -21,24 +20,20 @@ namespace SteerpathSmartXamarin.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-
+       
             Window.AddFlags(WindowManagerFlags.KeepScreenOn);
             if (savedInstanceState == null)
             {
                 SmartMapFragment map = SmartMapFragment.NewInstance();
+                //FragmentManager.BeginTransaction().Replace(Resource.Id.map_container, map, SmartMapFragmentTag).Commit();
                 SupportFragmentManager
                     .BeginTransaction()
                     .Replace(Resource.Id.map_container, map, SmartMapFragmentTag)
                     .Commit();
                 map.AnimateCameraToBuildingRef("341", null);
             }
-            else {
-                GetMap().AnimateCameraToBuildingRef("341", null);
-            }
 
-            
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -58,10 +53,10 @@ namespace SteerpathSmartXamarin.Droid
             return base.OnOptionsItemSelected(item);
         }
 
-        protected SmartMapFragment GetMap()
-        {
-            return (SmartMapFragment)SupportFragmentManager.FindFragmentByTag(SmartMapFragmentTag);
-        }
+        //protected SmartMapFragment GetMap()
+        //{
+        //    return (SmartMapFragment)SupportFragmentManager.FindFragmentByTag(SmartMapFragmentTag);
+        //}
 
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
