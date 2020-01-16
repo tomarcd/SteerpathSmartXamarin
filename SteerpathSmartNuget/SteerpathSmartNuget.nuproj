@@ -7,7 +7,7 @@
     <ProjectGuid>{BEB4CED1-6AEE-4166-B230-AE8F4954D0A1}</ProjectGuid>
     <Description>Xamarin.SteerpathSmart</Description>
     <PackageId>Xamarin.SteerpathSmart</PackageId>
-    <PackageVersion>1.0.6</PackageVersion>
+    <PackageVersion>1.0.7</PackageVersion>
     <Authors>josephrene</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

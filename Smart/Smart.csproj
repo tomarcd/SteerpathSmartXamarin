@@ -80,10 +80,6 @@
       <Project>{AB11D859-E191-4DDF-8DBF-40C694D0BCB4}</Project>
       <Name>MapboxAndroidGestures</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Xamarin.Google.Android.Material\Xamarin.Google.Android.Material.csproj">
-      <Project>{0CA59AC1-2CCC-4A72-9B11-8A887663CE7E}</Project>
-      <Name>Xamarin.Google.Android.Material</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\smart-1.3.3.0.aar" />
